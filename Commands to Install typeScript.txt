@@ -1,0 +1,12 @@
+Command 1 (to install typescript):  npm install -g typescript
+
+Command 2 (to install typescript): npm install  -D  typescript  ts-node
+
+Command 3 (to install typescript):  npm  install  -g  tsx 
+
+Command 4 (to add typescript config file):  npx tsc --init 
+
+
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
