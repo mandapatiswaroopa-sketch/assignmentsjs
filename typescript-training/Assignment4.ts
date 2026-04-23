@@ -29,24 +29,24 @@ for (let i = 0; i < transactions.length; i++) {
     // to get the credit count and total credit amount
 
     if (amount > 0) {
+        if (amount > 10000) {
+        suspiciousCredit += amount;
+        suspiciousCount++;
+    }
         creditCount++;
         totalCredit += amount;
 
     }
     // to get the debit count and total debit amount
     else {
+         if (amount < -10000) {
+        suspiciousDebit += amount;
+        suspiciousCount++;
+    } 
         debitCount++;
         totalDebit += amount;
     }
-    //To check suspicious transaction and to get the suspicioustransaction count
-    if (amount > 10000) {
-        suspiciousCredit += amount;
-        suspiciousCount++;
-    }
-    else if (amount < -10000) {
-        suspiciousDebit += amount;
-        suspiciousCount++;
-    }
+    
 }
 // to get the balance amount
 balance = totalCredit + totalDebit;
